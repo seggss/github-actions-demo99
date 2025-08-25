@@ -12,7 +12,7 @@ def create_app():
     def healthz():
         return jsonify(status="ok"), 200
 
-    @app.post("/add")
+    @app.post("/adds")
     def add():
         data = request.get_json(silent=True) or {}
         a = data.get("a")
